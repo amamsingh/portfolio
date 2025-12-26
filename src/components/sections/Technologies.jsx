@@ -12,7 +12,7 @@ const technologies = [
     "PostgreSQL",
     "MongoDB",
     "REST API",
-    "Maven",
+    
     "Git",
     "Docker",
     "AWS",

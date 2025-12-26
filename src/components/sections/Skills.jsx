@@ -22,7 +22,7 @@ const skillsData = [
     {
         category: "Tools & DevOps",
         icon: <PenTool className="w-6 h-6" />,
-        skills: ["Git & GitHub", "Docker", "Postman", "Maven", "IntelliJ IDEA", "VS Code"]
+        skills: ["Git & GitHub", "Docker", "Postman", "IntelliJ IDEA", "VS Code"]
     }
 ];
 
@@ -30,7 +30,7 @@ export default function Skills() {
     return (
         <section id="skills" className="py-24 relative">
             <div className="max-w-7xl mx-auto px-6">
-                <SectionTitle title="Technical Skills" number="04" />
+                <SectionTitle title="Technical Skills"/>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {skillsData.map((category, index) => (

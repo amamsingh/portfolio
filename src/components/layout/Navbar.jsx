@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, User, Briefcase, FolderGit2, Cpu, Mail } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const navItems = [
-    { name: 'About', to: 'about', number: '01.' },
-    { name: 'Experience', to: 'experience', number: '02.' },
-    { name: 'Projects', to: 'projects', number: '03.' },
-    { name: 'Skills', to: 'skills', number: '04.' },
-    { name: 'Contact', to: 'contact', number: '05.' },
+    { name: 'About', to: 'about', icon: <User className="w-7 h-7 text-neon-cyan group-hover:text-neon-purple transition-all duration-300" /> },
+    { name: 'Experience', to: 'experience', icon: <Briefcase className="w-7 h-7 text-neon-cyan group-hover:text-neon-purple transition-all duration-300" /> },
+    { name: 'Projects', to: 'projects', icon: <FolderGit2 className="w-7 h-7 text-neon-cyan group-hover:text-neon-purple transition-all duration-300" /> },
+    { name: 'Skills', to: 'skills', icon: <Cpu className="w-7 h-7 text-neon-cyan group-hover:text-neon-purple transition-all duration-300" /> },
+    { name: 'Contact', to: 'contact', icon: <Mail className="w-7 h-7 text-neon-cyan group-hover:text-neon-purple transition-all duration-300" /> },
 ];
 
 export default function Navbar() {
@@ -33,8 +33,43 @@ export default function Navbar() {
                     className="cursor-pointer group"
                 >
                     <Link to="hero" smooth={true} duration={500}>
-                        <div className="text-neon-purple font-mono font-bold text-xl border-2 border-neon-purple rounded-full px-2 py-1 group-hover:bg-neon-purple/10 group-hover:shadow-[0_0_15px_rgba(176,0,255,0.5)] transition-all duration-300">
-                            &lt;as /&gt;
+                        <div className="relative w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                            {/* Hexagon Background */}
+                            <svg viewBox="0 0 100 100" className="w-full h-full drop-shadow-[0_0_8px_rgba(176,0,255,0.5)]">
+                                <defs>
+                                    <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stopColor="#b000ff" />
+                                        <stop offset="100%" stopColor="#00ffff" />
+                                    </linearGradient>
+                                    <filter id="glow">
+                                        <feGaussianBlur stdDeviation="2.5" result="coloredBlur" />
+                                        <feMerge>
+                                            <feMergeNode in="coloredBlur" />
+                                            <feMergeNode in="SourceGraphic" />
+                                        </feMerge>
+                                    </filter>
+                                </defs>
+                                <path
+                                    d="M50 5 L93.3 30 V80 L50 105 L6.7 80 V30 Z"
+                                    fill="none"
+                                    stroke="url(#logo-gradient)"
+                                    strokeWidth="3"
+                                    className="group-hover:stroke-[4px] transition-all duration-300"
+                                />
+                                <text
+                                    x="50"
+                                    y="68"
+                                    fontSize="38"
+                                    fontWeight="bold"
+                                    fontFamily="monospace"
+                                    fill="white"
+                                    textAnchor="middle"
+                                    className="group-hover:fill-neon-cyan transition-colors duration-300"
+                                    style={{ filter: "drop-shadow(0 0 2px rgba(176,0,255,0.8))" }}
+                                >
+                                    AS
+                                </text>
+                            </svg>
                         </div>
                     </Link>
                 </motion.div>
@@ -53,10 +88,19 @@ export default function Navbar() {
                                     to={item.to}
                                     smooth={true}
                                     duration={500}
-                                    className="cursor-pointer font-mono text-sm text-slate-light hover:text-neon-cyan transition-colors group"
+                                    className="cursor-pointer font-mono text-sm text-slate-light hover:text-neon-cyan transition-colors group flex items-center gap-3"
                                 >
-                                    <span className="text-neon-purple mr-1">{item.number}</span>
-                                    <span className="group-hover:text-neon-cyan group-hover:drop-shadow-[0_0_5px_rgba(0,255,255,0.5)] transition-all">{item.name}</span>
+                                    <motion.div
+                                        className="relative flex items-center justify-center"
+                                        whileTap={{ scale: 1.25 }}
+                                        transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                                    >
+                                        <div className="absolute inset-0 bg-neon-cyan/20 blur-md rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                        {item.icon}
+                                    </motion.div>
+                                    <span className="group-hover:text-neon-cyan group-hover:drop-shadow-[0_0_5px_rgba(0,255,255,0.5)] transition-all font-bold tracking-wide">
+                                        {item.name}
+                                    </span>
                                 </Link>
                             </motion.li>
                         ))}
@@ -106,10 +150,18 @@ export default function Navbar() {
                                         smooth={true}
                                         duration={500}
                                         onClick={() => setIsOpen(false)}
-                                        className="flex flex-col items-center cursor-pointer font-mono text-lg text-slate-light hover:text-neon-cyan"
+                                        className="flex flex-col items-center cursor-pointer font-mono text-lg text-slate-light hover:text-neon-cyan group"
                                     >
-                                        <span className="text-neon-purple mb-2 text-sm">{item.number}</span>
-                                        <span>{item.name}</span>
+                                        <motion.div
+                                            className="p-3 mb-2 rounded-full bg-navy-800 border border-white/10 group-hover:border-neon-cyan/50 group-hover:shadow-[0_0_15px_rgba(0,255,255,0.3)] transition-all"
+                                            whileTap={{ scale: 1.25 }}
+                                            transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                                        >
+                                            {item.icon}
+                                        </motion.div>
+                                        <span className="font-bold tracking-wider">
+                                            {item.name}
+                                        </span>
                                     </Link>
                                 </li>
                             ))}

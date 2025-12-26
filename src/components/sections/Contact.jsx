@@ -8,7 +8,7 @@ export default function Contact() {
             <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent -z-10" />
 
             <div className="max-w-3xl mx-auto px-6 text-center">
-                <p className="font-mono text-neon-purple mb-4">05. What's Next?</p>
+                <p className="font-mono text-neon-purple mb-4"> What's Next?</p>
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 text-glow">
                     Get In Touch
                 </h2>

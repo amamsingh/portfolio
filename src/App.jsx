@@ -11,13 +11,38 @@ import Contact from './components/sections/Contact';
 function App() {
   return (
     <Layout>
-      <Hero />
-      <About />
-      <Skills />
-      <Technologies />
-      <Projects />
-      <Experience />
-      <Contact />
+      {/* Page 1: Hero */}
+      <div className="h-full w-full overflow-hidden relative bg-navy-900">
+        <Hero />
+      </div>
+
+      {/* Page 2: About */}
+      <div className="h-full w-full overflow-y-auto custom-scrollbar p-6 md:p-10 bg-navy-900 border-l border-white/5">
+        <About />
+      </div>
+
+      {/* Page 3: Experience */}
+      <div className="h-full w-full overflow-y-auto custom-scrollbar p-6 md:p-10 bg-navy-900 border-l border-white/5">
+        <Experience />
+      </div>
+
+      {/* Page 4: Skills & Technologies */}
+      <div className="h-full w-full overflow-y-auto custom-scrollbar p-6 md:p-10 bg-navy-900 border-l border-white/5">
+        <Skills />
+        <div className="mt-12">
+          <Technologies />
+        </div>
+      </div>
+
+      {/* Page 5: Projects */}
+      <div className="h-full w-full overflow-y-auto custom-scrollbar p-6 md:p-10 bg-navy-900 border-l border-white/5">
+        <Projects />
+      </div>
+
+      {/* Page 6: Contact */}
+      <div className="h-full w-full overflow-y-auto custom-scrollbar p-6 md:p-10 bg-navy-900 border-l border-white/5">
+        <Contact />
+      </div>
     </Layout>
   );
 }

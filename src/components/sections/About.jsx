@@ -7,7 +7,7 @@ export default function About() {
     return (
         <section id="about" className="py-24 relative">
             <div className="max-w-7xl mx-auto px-6">
-                <SectionTitle title="About Me" number="01" />
+                <SectionTitle title="About Me" />
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     {/* Left Column: Text */}

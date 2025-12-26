@@ -41,7 +41,7 @@ export default function Experience() {
             <div className="absolute right-0 top-1/4 w-96 h-96 bg-violet-900/20 rounded-full blur-[100px] -z-10" />
 
             <div className="max-w-6xl mx-auto px-6">
-                <SectionTitle title="Where I've Worked" number="02" />
+                <SectionTitle title="Where I've Worked"  />
 
                 <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
                     {experienceData.map((item, index) => (
