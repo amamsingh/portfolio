@@ -12,12 +12,12 @@ const skillsData = [
     {
         category: "Frontend",
         icon: <Code className="w-6 h-6" />,
-        skills: ["React.js", "JavaScript (ES6+)", "Tailwind CSS", "HTML5", "CSS3", "Redux"]
+        skills: ["React.js", "JavaScript", "Tailwind CSS", "HTML", "CSS"]
     },
     {
         category: "Database",
         icon: <Database className="w-6 h-6" />,
-        skills: ["MySQL", "PostgreSQL", "MongoDB", "JDBC", "SQL"]
+        skills: ["MySQL", "PostgreSQL", "JDBC", "SQL"]
     },
     {
         category: "Tools & DevOps",
