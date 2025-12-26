@@ -18,9 +18,16 @@ export default function Contact() {
 
                 <a
                     href="mailto:amansingh001r@gmail.com"
-                    className="inline-block relative px-8 py-4 bg-violet-800/20 backdrop-blur-sm border border-neon-purple text-neon-purple font-mono text-sm rounded hover:bg-neon-purple/10 hover:shadow-[0_0_20px_rgba(176,0,255,0.4)] transition-all duration-300 group overflow-hidden"
+                    className="group relative inline-block px-10 py-5 bg-transparent overflow-hidden rounded-lg transition-transform hover:scale-105"
                 >
-                    <span className="relative z-10">Say Hello</span>
+                    {/* Background and Border effects */}
+                    <div className="absolute inset-0 border border-neon-purple/50 rounded-lg group-hover:border-neon-cyan/50 transition-colors duration-300" />
+                    <div className="absolute inset-0 bg-neon-purple/10 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                    <div className="absolute -inset-1 bg-gradient-to-r from-neon-purple to-neon-cyan opacity-0 group-hover:opacity-20 blur-md transition-opacity duration-300" />
+
+                    <span className="relative z-10 font-mono text-lg text-neon-purple group-hover:text-neon-cyan transition-colors duration-300 flex items-center gap-3">
+                        Say Hello
+                    </span>
                 </a>
             </div>
         </section>

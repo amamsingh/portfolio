@@ -105,9 +105,17 @@ export default function Hero() {
                     transition={{ duration: 0.6, delay: 0.2 }}
                     className="max-w-3xl"
                 >
-                    <h2 className="text-neon-cyan font-mono text-lg mb-6 tracking-wide">
-                        Hi, I'm a Software Engineer
-                    </h2>
+                    <div className="overflow-hidden mb-6 h-8 flex justify-center">
+                        <motion.h2
+                            className="text-neon-cyan font-mono text-lg tracking-wide border-r-2 border-neon-cyan pr-1"
+                            initial={{ width: 0 }}
+                            animate={{ width: "100%" }}
+                            transition={{ duration: 3.5, ease: "steps(30)", delay: 0.5 }}
+                            style={{ whiteSpace: 'nowrap', width: 'fit-content' }}
+                        >
+                            Hi, I'm a Software Engineer
+                        </motion.h2>
+                    </div>
 
                     <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight text-glow">
                         aman <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-purple to-neon-cyan">Singh.</span>
