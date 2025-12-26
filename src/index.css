@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #0a192f;
+  --light-navy: #112240;
+  --lightest-navy: #233554;
+  --slate: #8892b0;
+  --light-slate: #ccd6f6;
+  --white: #e6f1ff;
+  --green: #64ffda;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-violet-900/40 backdrop-blur-lg border border-white/10 shadow-xl;
+  }
+
+  .glass-nav {
+    @apply bg-navy-900/70 backdrop-blur-md border-b border-white/5;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 10px rgba(176, 0, 255, 0.5), 0 0 20px rgba(176, 0, 255, 0.3);
+  }
+}
+
+body {
+  @apply bg-navy-900 text-slate font-sans font-medium selection:bg-neon-purple/30 selection:text-neon-cyan;
+  background-image:
+    radial-gradient(circle at 15% 50%, rgba(76, 29, 149, 0.15) 0%, transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(176, 0, 255, 0.1) 0%, transparent 25%);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-navy-900;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #432c7a, #764ba2);
+  @apply rounded-full border-[2px] border-navy-900;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #5a3a9e, #9263c9);
+}
+
+.numbered-heading::before {
+  @apply font-mono text-neon-purple mr-2 text-lg font-normal;
+  counter-increment: section;
+  content: "0" counter(section) ".";
+}
