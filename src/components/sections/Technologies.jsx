@@ -12,7 +12,7 @@ const technologies = [
     "PostgreSQL",
     "MongoDB",
     "REST API",
-    
+
     "Git",
     "Docker",
     "AWS",
@@ -22,7 +22,7 @@ const technologies = [
 
 export default function Technologies() {
     return (
-        <section id="technologies" className="py-20 relative">
+        <section id="technologies" className="py-10 relative">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="flex items-center gap-4 mb-12">
                     <div className="h-[1px] w-12 bg-neon-purple"></div>

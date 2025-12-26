@@ -29,7 +29,7 @@ function App() {
       {/* Page 4: Skills & Technologies */}
       <div className="h-full w-full overflow-y-auto custom-scrollbar p-6 md:p-10 bg-navy-900 border-l border-white/5">
         <Skills />
-        <div className="mt-12">
+        <div className="mt-0">
           <Technologies />
         </div>
       </div>

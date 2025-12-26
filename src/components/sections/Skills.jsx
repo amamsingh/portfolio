@@ -28,9 +28,9 @@ const skillsData = [
 
 export default function Skills() {
     return (
-        <section id="skills" className="py-24 relative">
+        <section id="skills" className="py-12 relative">
             <div className="max-w-7xl mx-auto px-6">
-                <SectionTitle title="Technical Skills"/>
+                <SectionTitle title="Technical Skills" />
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {skillsData.map((category, index) => (
