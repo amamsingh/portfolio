@@ -34,7 +34,7 @@ export default function Projects() {
         <section id="projects" className="py-24 relative">
             <div className="absolute left-0 bottom-1/4 w-80 h-80 bg-neon-purple/10 rounded-full blur-[100px] -z-10" />
             <div className="max-w-7xl mx-auto px-6">
-                <SectionTitle title="Somethings I've Built" number="03" />
+                <SectionTitle title="Somethings I've Built" />
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {projectsData.map((project, index) => (
