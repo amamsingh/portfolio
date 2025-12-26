@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
-import { Menu, X, User, Briefcase, FolderGit2, Cpu, Mail } from 'lucide-react';
+import { Menu, X, User, Briefcase, FolderGit2, Cpu, Mail, FileUser } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const navItems = [
@@ -114,9 +114,16 @@ export default function Navbar() {
                             href="https://drive.google.com/file/d/1qy6pWI4qf04pbbdaqWHHS3Rp48NkRct6/view?usp=drive_link"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="px-4 py-2 border border-neon-purple text-neon-purple font-mono text-sm rounded hover:bg-neon-purple/10 hover:shadow-[0_0_15px_rgba(176,0,255,0.4)] transition-all duration-300"
+                            className="group relative px-6 py-2 bg-transparent overflow-hidden rounded-md transition-all hover:scale-105 active:scale-95"
                         >
-                            Resume
+                            <div className="absolute inset-0 border border-neon-purple/50 rounded-md group-hover:border-neon-cyan/50 transition-colors duration-300" />
+                            <div className="absolute inset-0 bg-neon-purple/10 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                            <div className="absolute -inset-1 bg-gradient-to-r from-neon-purple to-neon-cyan opacity-0 group-hover:opacity-20 blur-md transition-opacity duration-300" />
+
+                            <span className="relative flex items-center gap-2 text-neon-purple font-mono text-sm group-hover:text-neon-cyan transition-colors duration-300">
+                                <FileUser className="w-4 h-4" />
+                                Resume
+                            </span>
                         </a>
                     </motion.div>
                 </div>
@@ -167,12 +174,18 @@ export default function Navbar() {
                             ))}
                         </ol>
                         <a
-                            href="/resume.pdf"
+                            href="https://drive.google.com/file/d/1qy6pWI4qf04pbbdaqWHHS3Rp48NkRct6/view?usp=drive_link"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="px-8 py-4 border border-neon-purple text-neon-purple font-mono text-lg rounded hover:bg-neon-purple/10 transition-colors"
+                            className="group relative px-8 py-3 overflow-hidden rounded-lg mt-4"
                         >
-                            Resume
+                            <div className="absolute inset-0 bg-none border-2 border-neon-purple rounded-lg group-hover:border-neon-cyan transition-colors duration-300" />
+                            <div className="absolute inset-0 bg-neon-purple/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+
+                            <span className="relative flex items-center gap-3 text-neon-purple font-mono text-xl group-hover:text-white transition-colors duration-300">
+                                <FileUser className="w-6 h-6" />
+                                Resume
+                            </span>
                         </a>
 
                         <button
