@@ -6,6 +6,8 @@ export default function ProjectCard({ project, index }) {
     return (
         <motion.div
             initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             whileHover={{ scale: 1.02 }}
             className="glass-card hover:bg-violet-900/40 rounded-xl transition-all duration-300 hover:-translate-y-2 flex flex-col group h-full border border-white/5 hover:border-neon-cyan/50 hover:shadow-[0_0_25px_rgba(0,255,255,0.15)] relative overflow-hidden"
         >
